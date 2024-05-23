@@ -1,3 +1,5 @@
+import {Button} from "@/components/ui/button.tsx";
+
 const Link = (props: JSX.IntrinsicElements['a']) => (
   <a
     className="text-pink-500 underline hover:no-underline dark:text-pink-400"
@@ -25,6 +27,10 @@ export default function App() {
         </code>{' '}
         for live updates.
       </p>
+
+      <Button>
+        adw
+      </Button>
     </div>
   );
 }
