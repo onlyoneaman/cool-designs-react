@@ -9,15 +9,15 @@ const Home = () => {
       link: "/donothingforaminute",
     },
     {
-      title: "Cool Page 2",
-      description: "Another cool design you can showcase here.",
-      link: "/design2",
+      title: "CTA Buttons",
+      description: "Before and after examples of call-to-action buttons.",
+      link: "/cta-buttons",
     },
-    {
-      title: "Future Designs",
-      description: "Keep adding more designs to expand your collection.",
-      link: "/design3",
-    },
+    // {
+    //   title: "Future Designs",
+    //   description: "Keep adding more designs to expand your collection.",
+    //   link: "/design3",
+    // },
   ];
 
   return (
