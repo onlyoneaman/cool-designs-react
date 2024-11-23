@@ -1,20 +1,44 @@
 import Footer from "@/components/Footer.js";
+import {Link} from "react-router-dom";
+import {Button} from "@/components/ui/button.js";
 
 type LayoutProps = {
   children: React.ReactNode;
 }
 
-const Layout = (props: LayoutProps) => {
-  const { children } = props;
+const Layout = ({ children }: LayoutProps) => {
+  return (
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-neutral-50 to-neutral-100">
+      {/* Header */}
+      <header className="w-full mx-auto py-6 px-4">
+        <div className="flex justify-end">
+          <Button
+            variant='link'
+          >
+            <Link to='/'>Back</Link>
+          </Button>
+          <Link
+            to='https://x.com/onlyoneaman'
+            target='_blank'
+          >
+            <Button
+              className='text-gray-500 hover:text-gray-700'
+              variant='link'
+            >
+              x.com
+            </Button>
+          </Link>
+        </div>
+      </header>
 
-  return(
-    <div className="min-h-screen bg-gradient-to-b from-neutral-50 to-neutral-100 flex flex-col items-center justify-between">
-      <div className='py-9 flex items-center justify-center grow'>
+      {/* Main Content */}
+      <main className="w-full grow flex flex-col items-center justify-center p-6">
         {children}
-      </div>
+      </main>
+
       <Footer />
     </div>
-  )
-}
+  );
+};
 
 export default Layout;
