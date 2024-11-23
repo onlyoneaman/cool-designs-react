@@ -1,5 +1,6 @@
 import {Button} from "@/components/ui/button.tsx";
 import {useState} from "react";
+import Timer from "@/components/Timer/Timer.js";
 
 const Link = (props: JSX.IntrinsicElements['a']) => (
   <a
