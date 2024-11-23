@@ -2,7 +2,7 @@ import React from "react";
 
 const AnimatedCTAButton = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-neutral-50 to-neutral-100 flex items-center justify-center p-4">
+    <div className="flex items-center justify-center">
       <button
         className="relative flex items-center gap-3 py-4 px-8 rounded-full bg-black hover:bg-black/90 text-white text-lg font-medium overflow-hidden group transition-all duration-300"
       >

@@ -21,7 +21,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center py-8">
+    <div className="flex flex-col items-start justify-start grow py-0">
       <h1 className="text-3xl font-bold mb-6">Cool Design Pages</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl w-full px-4">
         {pages.map((page, index) => (

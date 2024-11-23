@@ -22,7 +22,7 @@ const Timer = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 text-gray-800">
+    <div className="flex flex-col items-center justify-center bg-gray-50 text-gray-800">
       {!isComplete ? (
         <>
           <h1 className="text-xl font-medium mb-4">do nothing for a minute</h1>
