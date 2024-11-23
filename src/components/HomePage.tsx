@@ -71,6 +71,14 @@ const HomePage = () => {
       path: "/cta-buttons",
       imageUrl: "/src/assets/images/pages/cta-button/img_1.png"
     },
+    {
+      title: "Animated Scroll Page",
+      description: "Scroll animation with @react-sprint/web",
+      category: "Web",
+      backgroundColor: "#F9F9F9",
+      path: "animated-scroll-page",
+      imageUrl: "/src/components/AnimatedScrollPage/img.png"
+    }
   ];
 
   return (

@@ -3,6 +3,7 @@ import {useRoutes} from "react-router-dom";
 import Timer from "@/components/Timer/Timer.js";
 import CTAButtonsPage from "@/components/CTAButtons/index.js";
 import Layout from "@/components/Layout.js";
+import AnimatedScrollPage from "@/components/AnimatedScrollPage/index.js";
 
 export default function App() {
 
@@ -14,6 +15,10 @@ export default function App() {
     {
       path: "/cta-buttons",
       element: <CTAButtonsPage />
+    },
+    {
+      path: "/animated-scroll-page",
+      element: <AnimatedScrollPage />
     },
     {
       element: <HomePage/>,

@@ -32,7 +32,7 @@ const Layout = ({ children }: LayoutProps) => {
       </header>
 
       {/* Main Content */}
-      <main className="w-full grow flex flex-col items-center justify-center p-6">
+      <main className="w-full grow flex flex-col items-center justify-center">
         {children}
       </main>
 
