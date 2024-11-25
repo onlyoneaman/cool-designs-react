@@ -10,6 +10,7 @@ import TabsContent from "@/components/TabsContent/index.js";
 import UnblurHeadingPage from "@/components/UnblurHeadingPage/index.js";
 import FloatingWidget from "@/components/FloatingWidget.js";
 import {useGlobalContext} from "@/context/GlobalContext.js";
+import ImpossibleCheckbox from "@/components/ImpossibleCheckbox/index.js";
 
 export default function App() {
   const { isFullScreen } = useGlobalContext();
@@ -38,6 +39,10 @@ export default function App() {
     {
       path: paths.UnblurHeading,
       element: <UnblurHeadingPage />
+    },
+    {
+      path: paths.ImpossibleCheckbox,
+      element: <ImpossibleCheckbox />
     },
     {
       element: <HomePage/>,

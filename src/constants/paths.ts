@@ -5,6 +5,7 @@ const paths = {
   tagging: '/tagging',
   tabsContent: '/tabs-content',
   UnblurHeading: '/unblur-heading',
+  ImpossibleCheckbox: '/impossible-checkbox',
 }
 
 export default paths;
