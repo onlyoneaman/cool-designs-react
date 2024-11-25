@@ -1,13 +1,22 @@
-import React, { useRef } from 'react';
+import React, {useEffect, useRef} from 'react';
 import { useScroll, animated, useSpring } from '@react-spring/web';
+import {useGlobalContext} from "@/context/GlobalContext.js";
 
 const X_LINES = 40;
 const PAGE_COUNT = 5;
 const INITIAL_WIDTH = 20;
 
 const AnimatedScroll = () => {
+  const { setFullScreen} = useGlobalContext()
   const containerRef = useRef(null);
   const barContainerRef = useRef(null);
+
+  useEffect(() => {
+    setFullScreen(true)
+    return () => {
+      setFullScreen(false)
+    }
+  }, []);
 
   const [textStyles, textApi] = useSpring(() => ({
     y: '100%',

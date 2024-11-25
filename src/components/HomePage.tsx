@@ -104,6 +104,13 @@ const HomePage = () => {
       backgroundColor: "#F9F9F9",
       path: paths.tabsContent,
       imageUrl: imageTabsContent
+    },
+    {
+      title: "Unblur Heading",
+      description: "Unblur heading on scroll",
+      category: categories.WEB,
+      backgroundColor: "#000",
+      path: paths.UnblurHeading,
     }
   ];
 

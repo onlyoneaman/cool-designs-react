@@ -4,6 +4,7 @@ const paths = {
   AnimatedScrollPage: '/animated-scroll-page',
   tagging: '/tagging',
   tabsContent: '/tabs-content',
+  UnblurHeading: '/unblur-heading',
 }
 
 export default paths;

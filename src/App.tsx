@@ -7,8 +7,12 @@ import AnimatedScrollPage from "@/components/AnimatedScrollPage/index.js";
 import paths from "@/constants/paths.js";
 import TaggingPage from "@/components/TaggingPage/index.js";
 import TabsContent from "@/components/TabsContent/index.js";
+import UnblurHeadingPage from "@/components/UnblurHeadingPage/index.js";
+import FloatingWidget from "@/components/FloatingWidget.js";
+import {useGlobalContext} from "@/context/GlobalContext.js";
 
 export default function App() {
+  const { isFullScreen } = useGlobalContext();
 
   const routes = useRoutes([
     {
@@ -32,10 +36,23 @@ export default function App() {
       element: <TabsContent />
     },
     {
+      path: paths.UnblurHeading,
+      element: <UnblurHeadingPage />
+    },
+    {
       element: <HomePage/>,
       path: '*',
     }
   ]);
+
+  if(isFullScreen) {
+    return (
+      <>
+        {routes}
+        <FloatingWidget />
+      </>
+    )
+  }
 
   return(
     <Layout>

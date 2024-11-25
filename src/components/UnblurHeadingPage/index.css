@@ -1,0 +1,23 @@
+:root {
+    --pxPerWord: 100px;
+    --section: scroll;
+}
+
+.word {
+    --start: calc(var(--i) * var(--pxPerWord));
+    --end: calc((var(--i) + 1) * var(--pxPerWord));
+    animation: fx 1.5s ease forwards;
+    animation-timeline: var(--section);
+    animation-range: var(--start) var(--end);
+}
+
+@keyframes fx {
+    0% {
+        filter: blur(20px);
+        opacity: 0;
+    }
+    100% {
+        filter: blur(0);
+        opacity: 1;
+    }
+}
