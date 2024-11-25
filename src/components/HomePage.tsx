@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Globe, Monitor, Smartphone, Watch, Apple, Phone, Image, Play } from 'lucide-react';
+import React, {useState} from 'react';
+import {Globe, Monitor, Smartphone, Watch, Apple, Phone, Image, Play} from 'lucide-react';
 import {Link} from "react-router-dom";
 import paths from "@/constants/paths.js";
 import categories from "@/constants/categories.js";
@@ -7,8 +7,9 @@ import categories from "@/constants/categories.js";
 import imageDoNothing from "/src/assets/images/pages/timer/card.png";
 import imageCtaBtn from "/src/assets/images/pages/cta-button/img_1.png";
 import imageScrollPage from "/src/components/AnimatedScrollPage/img.png";
+import imageTagging from '/src/components/TaggingPage/img.png';
 
-const FilterButton = ({ active, children, onClick }: any) => (
+const FilterButton = ({active, children, onClick}: any) => (
   <button
     onClick={onClick}
     className={`px-4 py-2 rounded-full transition-colors ${
@@ -21,11 +22,11 @@ const FilterButton = ({ active, children, onClick }: any) => (
   </button>
 );
 
-const DesignCard = ({ title, description, category, imageUrl, backgroundColor, path }: any) => (
+const DesignCard = ({title, description, category, imageUrl, backgroundColor, path}: any) => (
   <Link to={path}>
     <div
       className="rounded-3xl overflow-hidden aspect-square relative group cursor-pointer"
-      style={{ backgroundColor: backgroundColor || '#000' }}
+      style={{backgroundColor: backgroundColor || '#000'}}
 
     >
       {imageUrl && (
@@ -35,8 +36,10 @@ const DesignCard = ({ title, description, category, imageUrl, backgroundColor, p
           className="w-full h-full object-cover"
         />
       )}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-70 transition-opacity duration-300" />
-      <div className="absolute bottom-0 left-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+      <div
+        className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-70 transition-opacity duration-300"/>
+      <div
+        className="absolute bottom-0 left-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
         <span className="text-sm text-gray-300 mb-2 block">{category}</span>
         <h3 className="text-lg font-semibold mb-2">{title}</h3>
         <p className="text-sm text-gray-300">{description}</p>
@@ -49,15 +52,15 @@ const HomePage = () => {
   const [activeFilter, setActiveFilter] = useState('Web');
 
   const filters = [
-    { name: 'All', icon: Globe },
-    { name: 'Web', icon: Monitor },
-    { name: 'Desktop', icon: Monitor },
-    { name: 'Mobile', icon: Smartphone },
-    { name: 'Watch', icon: Watch },
-    { name: 'iOS', icon: Apple },
-    { name: 'Android', icon: Phone },
-    { name: 'Icon', icon: Image },
-    { name: 'Motion', icon: Play }
+    {name: 'All', icon: Globe},
+    {name: 'Web', icon: Monitor},
+    {name: 'Desktop', icon: Monitor},
+    {name: 'Mobile', icon: Smartphone},
+    {name: 'Watch', icon: Watch},
+    {name: 'iOS', icon: Apple},
+    {name: 'Android', icon: Phone},
+    {name: 'Icon', icon: Image},
+    {name: 'Motion', icon: Play}
   ];
 
   const designs = [
@@ -84,6 +87,14 @@ const HomePage = () => {
       backgroundColor: "#F9F9F9",
       path: paths.AnimatedScrollPage,
       imageUrl: imageScrollPage
+    },
+    {
+      title: 'Tagging',
+      description: 'Tagging system for organizing tasks',
+      category: categories.WEB,
+      backgroundColor: '#A8A8A8',
+      path: paths.tagging,
+      imageUrl: imageTagging
     }
   ];
 
@@ -103,14 +114,14 @@ const HomePage = () => {
       {/* Navigation */}
       <nav className="w-full max-w-5xl mx-auto mb-6 px-4 overflow-x-auto">
         <div className="hidden flex gap-2 min-w-max justify-start md:justify-center">
-          {filters.map(({ name, icon: Icon }) => (
+          {filters.map(({name, icon: Icon}) => (
             <FilterButton
               key={name}
               active={activeFilter === name}
               onClick={() => setActiveFilter(name)}
             >
               <div className="flex items-center gap-2">
-                <Icon size={16} />
+                <Icon size={16}/>
                 {name}
               </div>
             </FilterButton>
