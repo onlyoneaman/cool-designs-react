@@ -4,20 +4,21 @@ import Timer from "@/components/Timer/Timer.js";
 import CTAButtonsPage from "@/components/CTAButtons/index.js";
 import Layout from "@/components/Layout.js";
 import AnimatedScrollPage from "@/components/AnimatedScrollPage/index.js";
+import paths from "@/constants/paths.js";
 
 export default function App() {
 
   const routes = useRoutes([
     {
-      path: "/donothingforaminute",
+      path: paths.Donothingforaminute,
       element: <Timer/>
     },
     {
-      path: "/cta-buttons",
+      path: paths.CTA_BUTTONS,
       element: <CTAButtonsPage />
     },
     {
-      path: "/animated-scroll-page",
+      path: paths.AnimatedScrollPage,
       element: <AnimatedScrollPage />
     },
     {

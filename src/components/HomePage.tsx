@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Globe, Monitor, Smartphone, Watch, Apple, Phone, Image, Play } from 'lucide-react';
 import {Link} from "react-router-dom";
+import paths from "@/constants/paths.js";
 
 const FilterButton = ({ active, children, onClick }: any) => (
   <button
@@ -60,7 +61,7 @@ const HomePage = () => {
       description: "Simple timer app for relaxation",
       category: "Web",
       backgroundColor: "#1A1A1A",
-      path: "/donothingforaminute",
+      path: paths.Donothingforaminute,
       imageUrl: "/src/assets/images/pages/timer/card.png"
     },
     {
@@ -68,7 +69,7 @@ const HomePage = () => {
       description: "Call to action button design",
       category: "Web",
       backgroundColor: "#FFF5EB",
-      path: "/cta-buttons",
+      path: paths.CTA_BUTTONS,
       imageUrl: "/src/assets/images/pages/cta-button/img_1.png"
     },
     {
@@ -76,7 +77,7 @@ const HomePage = () => {
       description: "Scroll animation with @react-sprint/web",
       category: "Web",
       backgroundColor: "#F9F9F9",
-      path: "animated-scroll-page",
+      path: paths.AnimatedScrollPage,
       imageUrl: "/src/components/AnimatedScrollPage/img.png"
     }
   ];
