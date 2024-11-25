@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer.js";
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import {Button} from "@/components/ui/button.js";
 
 type LayoutProps = {
@@ -7,16 +7,21 @@ type LayoutProps = {
 }
 
 const Layout = ({ children }: LayoutProps) => {
+  const location = useLocation();
+  const path = location.pathname.split('/').filter(Boolean);
+
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-neutral-50 to-neutral-100">
       {/* Header */}
       <header className="w-full mx-auto py-6 px-4">
         <div className="flex justify-end">
-          <Button
-            variant='link'
-          >
-            <Link to='/'>Back</Link>
-          </Button>
+          {path.length>0 && (
+            <Button
+              variant='link'
+            >
+              <Link to='/'>Back</Link>
+            </Button>
+          )}
           <Link
             to='https://x.com/onlyoneaman'
             target='_blank'
