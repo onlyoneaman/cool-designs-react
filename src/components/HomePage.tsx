@@ -9,6 +9,7 @@ import imageCtaBtn from "/src/assets/images/pages/cta-button/img_1.png";
 import imageScrollPage from "/src/components/AnimatedScrollPage/img.png";
 import imageTagging from '/src/components/TaggingPage/img.png';
 import imageTabsContent from '/src/components/TabsContent/img.png';
+import imageRevealHeading from '/src/components/UnblurHeadingPage/img.png';
 
 const FilterButton = ({active, children, onClick}: any) => (
   <button
@@ -111,6 +112,7 @@ const HomePage = () => {
       category: categories.WEB,
       backgroundColor: "#000",
       path: paths.UnblurHeading,
+      imageUrl: imageRevealHeading
     }
   ];
 
