@@ -4,8 +4,8 @@ import {Link} from "react-router-dom";
 import paths from "@/constants/paths.js";
 import categories from "@/constants/categories.js";
 
-import imageDoNothing from "/src/assets/images/pages/timer/card.png";
-import imageCtaBtn from "/src/assets/images/pages/cta-button/img_1.png";
+import imageDoNothing from "/src/components/Timer/img.png";
+import imageCtaBtn from "/src/components/CTAButtons/img.png";
 import imageScrollPage from "/src/components/AnimatedScrollPage/img.png";
 import imageTagging from '/src/components/TaggingPage/img.png';
 import imageTabsContent from '/src/components/TabsContent/img.png';
