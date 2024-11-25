@@ -4,6 +4,10 @@ import {Link} from "react-router-dom";
 import paths from "@/constants/paths.js";
 import categories from "@/constants/categories.js";
 
+import imageDoNothing from "/src/assets/images/pages/timer/card.png";
+import imageCtaBtn from "/src/assets/images/pages/cta-button/img_1.png";
+import imageScrollPage from "/src/components/AnimatedScrollPage/img.png";
+
 const FilterButton = ({ active, children, onClick }: any) => (
   <button
     onClick={onClick}
@@ -63,7 +67,7 @@ const HomePage = () => {
       category: categories.WEB,
       backgroundColor: "#1A1A1A",
       path: paths.Donothingforaminute,
-      imageUrl: "/src/assets/images/pages/timer/card.png"
+      imageUrl: imageDoNothing
     },
     {
       title: "CTA Button",
@@ -71,7 +75,7 @@ const HomePage = () => {
       category: categories.WEB,
       backgroundColor: "#FFF5EB",
       path: paths.CTA_BUTTONS,
-      imageUrl: "/src/assets/images/pages/cta-button/img_1.png"
+      imageUrl: imageCtaBtn
     },
     {
       title: "Animated Scroll Page",
@@ -79,7 +83,7 @@ const HomePage = () => {
       category: categories.WEB,
       backgroundColor: "#F9F9F9",
       path: paths.AnimatedScrollPage,
-      imageUrl: "/src/components/AnimatedScrollPage/img.png"
+      imageUrl: imageScrollPage
     }
   ];
 
