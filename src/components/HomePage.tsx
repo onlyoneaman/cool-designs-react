@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Globe, Monitor, Smartphone, Watch, Apple, Phone, Image, Play } from 'lucide-react';
 import {Link} from "react-router-dom";
 import paths from "@/constants/paths.js";
+import categories from "@/constants/categories.js";
 
 const FilterButton = ({ active, children, onClick }: any) => (
   <button
@@ -59,7 +60,7 @@ const HomePage = () => {
     {
       title: "Donothingforaminute",
       description: "Simple timer app for relaxation",
-      category: "Web",
+      category: categories.WEB,
       backgroundColor: "#1A1A1A",
       path: paths.Donothingforaminute,
       imageUrl: "/src/assets/images/pages/timer/card.png"
@@ -67,7 +68,7 @@ const HomePage = () => {
     {
       title: "CTA Button",
       description: "Call to action button design",
-      category: "Web",
+      category: categories.WEB,
       backgroundColor: "#FFF5EB",
       path: paths.CTA_BUTTONS,
       imageUrl: "/src/assets/images/pages/cta-button/img_1.png"
@@ -75,7 +76,7 @@ const HomePage = () => {
     {
       title: "Animated Scroll Page",
       description: "Scroll animation with @react-sprint/web",
-      category: "Web",
+      category: categories.WEB,
       backgroundColor: "#F9F9F9",
       path: paths.AnimatedScrollPage,
       imageUrl: "/src/components/AnimatedScrollPage/img.png"
