@@ -8,6 +8,7 @@ import imageDoNothing from "/src/assets/images/pages/timer/card.png";
 import imageCtaBtn from "/src/assets/images/pages/cta-button/img_1.png";
 import imageScrollPage from "/src/components/AnimatedScrollPage/img.png";
 import imageTagging from '/src/components/TaggingPage/img.png';
+import imageTabsContent from '/src/components/TabsContent/img.png';
 
 const FilterButton = ({active, children, onClick}: any) => (
   <button
@@ -95,6 +96,14 @@ const HomePage = () => {
       backgroundColor: '#A8A8A8',
       path: paths.tagging,
       imageUrl: imageTagging
+    },
+    {
+      title: "Tabs Content",
+      description: "Tabs content with react-router-dom",
+      category: categories.WEB,
+      backgroundColor: "#F9F9F9",
+      path: paths.tabsContent,
+      imageUrl: imageTabsContent
     }
   ];
 

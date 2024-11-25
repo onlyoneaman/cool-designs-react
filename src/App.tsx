@@ -6,6 +6,7 @@ import Layout from "@/components/Layout.js";
 import AnimatedScrollPage from "@/components/AnimatedScrollPage/index.js";
 import paths from "@/constants/paths.js";
 import TaggingPage from "@/components/TaggingPage/index.js";
+import TabsContent from "@/components/TabsContent/index.js";
 
 export default function App() {
 
@@ -25,6 +26,10 @@ export default function App() {
     {
       path: paths.tagging,
       element: <TaggingPage />
+    },
+    {
+      path: paths.tabsContent,
+      element: <TabsContent />
     },
     {
       element: <HomePage/>,

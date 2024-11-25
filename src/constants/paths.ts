@@ -3,6 +3,7 @@ const paths = {
   Donothingforaminute: '/donothingforaminute',
   AnimatedScrollPage: '/animated-scroll-page',
   tagging: '/tagging',
+  tabsContent: '/tabs-content',
 }
 
 export default paths;
