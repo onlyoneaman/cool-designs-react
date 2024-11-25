@@ -120,7 +120,7 @@ const HomePage = () => {
 
       {/* Cards Grid */}
       <div className="w-full max-w-5xl mx-auto px-4 pb-9">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {designs
             // .filter(design => activeFilter === 'All' || design.category === activeFilter)
             .map((design, index) => (
