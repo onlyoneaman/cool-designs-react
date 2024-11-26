@@ -7,6 +7,7 @@ const paths = {
   UnblurHeading: '/unblur-heading',
   ImpossibleCheckbox: '/impossible-checkbox',
   MotionSidebar: '/motion-sidebar',
+  dashboard1: '/dashboard1',
 }
 
 export default paths;

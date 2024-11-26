@@ -12,6 +12,7 @@ import FloatingWidget from "@/components/FloatingWidget.js";
 import {useGlobalContext} from "@/context/GlobalContext.js";
 import ImpossibleCheckbox from "@/components/ImpossibleCheckbox/index.js";
 import MotionSidebar from "@/components/MotionSidebar/index.js";
+import {DashboardConcept1} from "@/components/DashboardConcepts/index.js";
 
 export default function App() {
   const { isFullScreen } = useGlobalContext();
@@ -48,6 +49,10 @@ export default function App() {
     {
       path: paths.MotionSidebar,
       element: <MotionSidebar />
+    },
+    {
+      path: paths.dashboard1,
+      element: <DashboardConcept1 />
     },
     {
       element: <HomePage/>,
