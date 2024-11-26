@@ -11,7 +11,7 @@ import UnblurHeadingPage from "@/components/UnblurHeadingPage/index.js";
 import FloatingWidget from "@/components/FloatingWidget.js";
 import ImpossibleCheckbox from "@/components/ImpossibleCheckbox/index.js";
 import MotionSidebar from "@/components/MotionSidebar/index.js";
-import {DashboardConcept1} from "@/components/DashboardConcepts/index.js";
+import {Concept2, DashboardConcept1} from "@/components/DashboardConcepts/index.js";
 
 export default function App() {
 
@@ -51,6 +51,10 @@ export default function App() {
     {
       path: paths.dashboard1,
       element: <DashboardConcept1 />
+    },
+    {
+      path: paths.dashboard2,
+      element: <Concept2 />
     },
     {
       element: <HomePage/>,

@@ -8,6 +8,7 @@ const paths = {
   ImpossibleCheckbox: '/impossible-checkbox',
   MotionSidebar: '/motion-sidebar',
   dashboard1: '/dashboard1',
+  dashboard2: '/dashboard2',
 }
 
 export default paths;

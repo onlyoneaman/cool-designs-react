@@ -12,7 +12,8 @@ import imageTabsContent from '/src/components/TabsContent/img.png';
 import imageRevealHeading from '/src/components/UnblurHeadingPage/img.png';
 import imageImpossibleCheckbox from '/src/components/ImpossibleCheckbox/img.png';
 import imageMotionSidebar from '/src/components/MotionSidebar/img.png';
-import imageDashboard1 from '/src/components/DashboardConcepts/1.png';
+import imageDashboard1 from '/src/components/DashboardConcepts/img1.png';
+import imageDashboard2 from '/src/components/DashboardConcepts/img2.png';
 
 const FilterButton = ({active, children, onClick}: any) => (
   <button
@@ -135,10 +136,17 @@ const HomePage = () => {
     },
     {
       title: 'Dashboard 1',
-      description: 'Dashboard concept with lucide icons',
+      description: 'Dashboard concept 1',
       category: categories.WEB,
       path: paths.dashboard1,
       imageUrl: imageDashboard1
+    },
+    {
+      title: 'Dashboard 2',
+      description: 'Simple dashboard concept',
+      category: categories.WEB,
+      path: paths.dashboard2,
+      imageUrl: imageDashboard2
     }
   ];
 
