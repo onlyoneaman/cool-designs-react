@@ -6,6 +6,7 @@ const paths = {
   tabsContent: '/tabs-content',
   UnblurHeading: '/unblur-heading',
   ImpossibleCheckbox: '/impossible-checkbox',
+  MotionSidebar: '/motion-sidebar',
 }
 
 export default paths;

@@ -11,6 +11,7 @@ import imageTagging from '/src/components/TaggingPage/img.png';
 import imageTabsContent from '/src/components/TabsContent/img.png';
 import imageRevealHeading from '/src/components/UnblurHeadingPage/img.png';
 import imageImpossibleCheckbox from '/src/components/ImpossibleCheckbox/img.png';
+import imageMotionSidebar from '/src/components/MotionSidebar/img.png';
 
 const FilterButton = ({active, children, onClick}: any) => (
   <button
@@ -25,7 +26,15 @@ const FilterButton = ({active, children, onClick}: any) => (
   </button>
 );
 
-const DesignCard = ({title, description, category, imageUrl, backgroundColor, path}: any) => (
+const DesignCard = (
+  {
+    title,
+    description,
+    category,
+    imageUrl,
+    backgroundColor = '#000',
+    path
+  }: any) => (
   <Link to={path}>
     <div
       className="rounded-3xl overflow-hidden aspect-square relative group cursor-pointer"
@@ -71,7 +80,6 @@ const HomePage = () => {
       title: "Donothingforaminute",
       description: "Simple timer app for relaxation",
       category: categories.WEB,
-      backgroundColor: "#1A1A1A",
       path: paths.Donothingforaminute,
       imageUrl: imageDoNothing
     },
@@ -79,7 +87,6 @@ const HomePage = () => {
       title: "CTA Button",
       description: "Call to action button design",
       category: categories.WEB,
-      backgroundColor: "#FFF5EB",
       path: paths.CTA_BUTTONS,
       imageUrl: imageCtaBtn
     },
@@ -87,7 +94,6 @@ const HomePage = () => {
       title: "Animated Scroll Page",
       description: "Scroll animation with @react-sprint/web",
       category: categories.WEB,
-      backgroundColor: "#F9F9F9",
       path: paths.AnimatedScrollPage,
       imageUrl: imageScrollPage
     },
@@ -95,7 +101,6 @@ const HomePage = () => {
       title: 'Tagging',
       description: 'Tagging system for organizing tasks',
       category: categories.WEB,
-      backgroundColor: '#A8A8A8',
       path: paths.tagging,
       imageUrl: imageTagging
     },
@@ -103,7 +108,6 @@ const HomePage = () => {
       title: "Tabs Content",
       description: "Tabs content with react-router-dom",
       category: categories.WEB,
-      backgroundColor: "#F9F9F9",
       path: paths.tabsContent,
       imageUrl: imageTabsContent
     },
@@ -111,7 +115,6 @@ const HomePage = () => {
       title: "Unblur Heading",
       description: "Unblur heading on scroll",
       category: categories.WEB,
-      backgroundColor: "#000",
       path: paths.UnblurHeading,
       imageUrl: imageRevealHeading
     },
@@ -119,9 +122,15 @@ const HomePage = () => {
       title: "Impossible Checkbox",
       description: "Checkbox with impossible state",
       category: categories.WEB,
-      backgroundColor: "#000",
       path: paths.ImpossibleCheckbox,
       imageUrl: imageImpossibleCheckbox
+    },
+    {
+      title: "Motion Sidebar",
+      description: "Sidebar with motion animation",
+      category: categories.WEB,
+      path: paths.MotionSidebar,
+      imageUrl: imageMotionSidebar
     }
   ];
 
