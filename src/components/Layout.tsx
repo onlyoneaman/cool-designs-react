@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer.js";
 import {Link, useLocation} from "react-router-dom";
 import {Button} from "@/components/ui/button.js";
+import {useGlobalContext} from "@/context/GlobalContext.js";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -8,7 +9,16 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   const location = useLocation();
+  const { isFullScreen } = useGlobalContext();
   const path = location.pathname.split('/').filter(Boolean);
+
+  if(isFullScreen) {
+    return (
+      <>
+        {children}
+      </>
+    )
+  }
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-neutral-50 to-neutral-100">

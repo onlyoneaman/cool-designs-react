@@ -9,13 +9,11 @@ import TaggingPage from "@/components/TaggingPage/index.js";
 import TabsContent from "@/components/TabsContent/index.js";
 import UnblurHeadingPage from "@/components/UnblurHeadingPage/index.js";
 import FloatingWidget from "@/components/FloatingWidget.js";
-import {useGlobalContext} from "@/context/GlobalContext.js";
 import ImpossibleCheckbox from "@/components/ImpossibleCheckbox/index.js";
 import MotionSidebar from "@/components/MotionSidebar/index.js";
 import {DashboardConcept1} from "@/components/DashboardConcepts/index.js";
 
 export default function App() {
-  const { isFullScreen } = useGlobalContext();
 
   const routes = useRoutes([
     {
@@ -60,17 +58,9 @@ export default function App() {
     }
   ]);
 
-  if(isFullScreen) {
-    return (
-      <>
-        {routes}
-        <FloatingWidget />
-      </>
-    )
-  }
-
   return(
     <Layout>
+      <FloatingWidget />
       {routes}
     </Layout>
   );
